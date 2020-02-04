@@ -1,7 +1,8 @@
 <template>
   <div class="jscollection-container">
     <p><a target="_blank" href="https://www.youtube.com/playlist?list=PLQtgBC2b8xGPU9MG8STbsQo0-H3v2wims&fbclid=IwAR2lSMdqV7zeW14DDIDaD8mT93mrJMzeEjcxFYaxjkSSfuGAt-bCrXiawBU&app=desktop">Коллекция художественных учебных фильмов и мультфильмов</a></p>
-    <p><a href="https://www.youtube.com/watch?v=0-aNTyFKMEI">https://www.youtube.com/watch?v=0-aNTyFKMEI</a></p>
+    <p><a target="_blank"  href="https://www.youtube.com/watch?v=0-aNTyFKMEI">https://www.youtube.com/watch?v=0-aNTyFKMEI</a></p>
+    <p><a target="_blank"  href="https://www.youtube.com/watch?v=rlW7cxax9OY">https://www.youtube.com/watch?v=rlW7cxax9OY</a></p>
     <h1>JavaScript Collection</h1>
     <h2>Мантры земных стихий </h2>
     <p>Работа с мантрами предполагает поэтапное освоение энергий различного уровня. Приведенные ниже мантры являются мантрами, которые применяются в программе Школы Йога Гуру Ар Сантэма на начальном уровне в практике <a href="/mantra-yoga-mantra-om.htm">мантра-йоги</a>. Данный перечень мантр даёт более плотный спектр энергий, что позволяет занимающимся за непродолжительный промежуток времени ощутить энергию этих мантр. А также, на более продвинутом этапе освоения мантра-йоги, прочувствовать отличительные свойства данных энергий и их влияние на физическую энергетическую и психологическую составляющую человека. </p>
