@@ -1,0 +1,10 @@
+
+npm install -g create-nuxt-app
+npx -v
+npm install -g npx
+npx create-nuxt-app name-project
+
+npm i bootstrap
+
+npm run dev
+
