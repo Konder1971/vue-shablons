@@ -1,3 +1,8 @@
 npm install pug
-npm pug -v
 npm install pug-cli -g
+
+npm pug -v  -посмотреть версию
+pug --help  -чтобы посмотреть все доступные флаги и их сокращения
+
+pug index.pug  -запуск
+pug --pretty -w index.pug  -слежка за изменениями в файлах *.pug
