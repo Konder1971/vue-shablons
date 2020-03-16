@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptocurrency Pricing Application</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+</head>
+
+  <body>
+
+    <div class="container" id="app">
+      <h3 class="text-center">Cryptocurrency Pricing</h3>
+      <p class="columns medium-12">
+        Статья тут:
+        <a
+          target="_blank"
+          href="https://webdevblog.ru/kak-ispolzovat-vue-js-i-axios-dlya-otobrazheniya-dannyh-iz-api/"
+        >https://webdevblog.ru/kak-ispolzovat-vue-js-i-axios-dlya-otobrazheniya-dannyh-iz-api/</a>
+      </p>
+
+      <div class="columns medium-6" v-for="(result, index) in results">
+        <div class="card">
+          <div class="card-section">
+            <p> {{ index }} </p>
+          </div>
+          <div class="card-divider">
+            <p>$ {{ result.USD }}</p>
+          </div>
+          <div class="card-section">
+            <p> &#8364 {{ result.EUR }}</p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      const url =
+        'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR'
+
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          results: []
+        },
+        mounted() {
+          axios.get(url).then((response) => {
+            this.results = response.data
+          })
+        }
+      })      
+    </script>
+  </body>
+</html>
