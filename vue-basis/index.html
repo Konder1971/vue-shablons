@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Vue app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div id="app" class="container">
+    <h2>{{ appTitle }}</h2>
+    <hr>
+
+    <div class="block block-vue1">
+      <p>Введите Имя: <input type="text" @input="changeName" /></p>
+      <h4>Name: {{ name }}</h4>
+      <p>Сумма 10 + 40 = {{ 10 + 40 }}</p>
+      <p>Methods: {{ sayHello() }}</p>
+      <p>Отображение при true/false: {{ isOk ? 'I am ok!' : 'I am NOT ok'}}</p>
+      <p>Функция реверс: {{ string.split('').reverse().join('') }}</p>
+      <p>Link: <a :href="url" target="_blank">Software development company Rightapplications</a></p>
+      <p>Вывод html: <span v-html="link"></span></p>
+      <hr>
+    </div>
+
+    <div class="block block-vueCounter">
+      <h4>Счётчик</h4>
+      <p>{{ title }}: {{ counter }}</p>
+      <button @click="riseCounter(1, 'Увеличен на 1')">Увеличить на 1</button>
+      <button @click="riseCounter(4, 'Увеличено на 4')">Увеличить на 4</button>
+      <button @click="riseCounter(13, 'Увеличили на 13')">Увеличить на 13</button>
+      <button @click="reduceCounter(7, 'Уменьшили на 7')">Уменьшить на 7</button>
+      <button @click="resetCounter('Сбросили счётчик')">Сбросить счётчик</button>
+    </div><hr>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue ({
+      el: '#app',
+      data () {
+        return {
+          appTitle: 'Vue App Title',
+          name: '',
+          isOk: true,
+          string: 'My name is Andrey',
+          url: 'https://rightapplications.com/',
+          link: '<a href="https://rightapplications.com/projects/" target="_blank">Portfolio</a>',
+          counter: 0,
+          title: 'Счетчик'
+        }
+      },
+      methods: {
+        changeName: function (event) {
+          this.name = event.target.value
+        },
+        sayHello () {
+          return 'I am function'
+        },
+        riseCounter (num, str) {
+          this.counter += num
+          this.title = str
+        },
+        reduceCounter (num, strReduce) {
+          this.counter -= num
+          this.title = strReduce
+        },
+        resetCounter (strReset) {
+          this.counter = 0
+          this.title = strReset
+        }
+      }
+    })
+  </script>
+</body>
+</html>

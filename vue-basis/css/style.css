@@ -1,0 +1,10 @@
+body {
+  background: url(https://ssl.gstatic.com/bfe/images/dashboard/tasklist-l.png) no-repeat left top,
+    url(https://ssl.gstatic.com/bfe/images/dashboard/tasklist-r.png) no-repeat right top;
+  background-size: 40vh;
+  background-repeat: no-repeat;
+}
+
+.block-vue1 p {
+  margin-bottom: 5px;
+}
