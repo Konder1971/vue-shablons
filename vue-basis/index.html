@@ -72,6 +72,8 @@
 
   <div id="app2" class="container"></div>
 
+  <div id="app3">{{ headertitleapp3 }}</div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
     Vue.component('my-component', {
@@ -194,6 +196,15 @@
         </div>`
     })
     app2.$mount('#app2')
+
+    new Vue ({
+      el: '#app3',
+      data() {
+        return {
+          headertitleapp3: 'Vue app3'
+        }
+      }
+    })
     
   </script>
 </body>
