@@ -4,7 +4,9 @@ body {
   background-size: 40vh;
   background-repeat: no-repeat;
 }
-
-.block-vue1 p {
+.block p {
   margin-bottom: 5px;
+}
+button {
+  cursor: pointer;
 }

@@ -30,11 +30,27 @@
     <div class="block block-vueCounter">
       <h4>Счётчик</h4>
       <p>{{ title }}: {{ counter }}</p>
-      <button @click="riseCounter(1, 'Увеличен на 1')">Увеличить на 1</button>
-      <button @click="riseCounter(4, 'Увеличено на 4')">Увеличить на 4</button>
-      <button @click="riseCounter(13, 'Увеличили на 13')">Увеличить на 13</button>
-      <button @click="reduceCounter(7, 'Уменьшили на 7')">Уменьшить на 7</button>
-      <button @click="resetCounter('Сбросили счётчик')">Сбросить счётчик</button>
+      <button class="btn btn-dark" @click="riseCounter(1, 'Увеличен на 1', $event)">Увеличить на 1</button>
+      <button class="btn btn-secondary" @click="riseCounter(4, 'Увеличено на 4', $event)">Увеличить на 4</button>
+      <button class="btn btn-warning" @click="riseCounter(13, 'Увеличили на 13', $event)">Увеличить на 13</button>
+      <button class="btn btn-primary" @click="reduceCounter(7, 'Уменьшили на 7', $event)">Уменьшить на 7</button>
+      <button class="btn btn-dark" @click="resetCounter('Сбросили счётчик', $event)">Сбросить счётчик</button>
+    </div><hr>
+
+    <div class="block">
+      <h4>Модификаторы событий</h4>
+      <p>Link: <a href="https://rightapplications.com/" target="_blank" @click.prevent="">Rightapplications</a> Тут Отменили переход по ссылке через @click.prevent=""</p>
+      <p @mousemove="move">
+        Выводим координаты мыши<br>
+        X: {{ x }} | Y: {{ y }}<br>
+        <span @mousemove.stop="">Не изменять - навести</span>
+      </p>
+    </div><hr>
+
+    <div class="block">
+      <h4>Ярлыки для директив v-model.lazy</h4>
+      <p><input type="text" v-model.lazy="inputValue"></p>
+      <p>{{ inputValue }}</p>
     </div><hr>
 
   </div>
@@ -51,7 +67,10 @@
           url: 'https://rightapplications.com/',
           link: '<a href="https://rightapplications.com/projects/" target="_blank">Portfolio</a>',
           counter: 0,
-          title: 'Счетчик'
+          title: 'Счетчик',
+          x: 0,
+          y: 0,
+          inputValue: ''
         }
       },
       methods: {
@@ -61,27 +80,32 @@
         sayHello () {
           return 'I am function'
         },
-        riseCounter (num, str) {
+        riseCounter (num, str, event) {
           this.counter += num
           this.title = str
           if(num === 1) {
-
+            event.target.style.color = 'blue'
           }
           if(num === 4) {
-            
+            event.target.style.color = 'red'
           }
-
           if(num === 13) {
-            
+            event.target.style.color = 'green'
           }
         },
-        reduceCounter (num, strReduce) {
+        reduceCounter (num, strReduce, event) {
           this.counter -= num
           this.title = strReduce
+          event.target.style.color = 'brown'
         },
-        resetCounter (strReset) {
+        resetCounter (strReset, event) {
           this.counter = 0
           this.title = strReset
+          event.target.style.color = 'darkcyan'
+        },
+        move: function (event) {
+          this.x = event.clientX;
+          this.y = event.clientY;
         }
       }
     })
