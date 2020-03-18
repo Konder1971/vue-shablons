@@ -66,7 +66,7 @@
       <button class="btn btn-dark" @click="doDestroy">Destroy</button>
     </div><hr>
 
-    <my-component />
+    <my-component v-for="c in 2" />
 
   </div>
 
@@ -76,11 +76,10 @@
   <script>
     Vue.component('my-component', {
       template: `
-      <div class="block">
+      <div class="block my-component">
         <h4>Component: my-component</h4>
         <h5>Counter: {{ contercomp }}</h5>
         <button class="btn btn-warning" @click="add">Add Counter</button>
-        <hr>
       </div>
       `,
       data () {
@@ -189,11 +188,9 @@
         }
       },
       template: `
-        <div class="container">
-          <div class="block">
-            <h3>{{ title }}</h3>
-          </div>
-          <hr>
+        <div class="container container-app2">
+          <h3>{{ title }}</h3>
+          <my-component v-for="c in 2" />
         </div>`
     })
     app2.$mount('#app2')

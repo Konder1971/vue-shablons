@@ -10,3 +10,12 @@ body {
 button {
   cursor: pointer;
 }
+.my-component {
+  border: 2px solid #555;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.container-app2 .my-component {
+  border: 2px solid #c00;
+  background-color: aliceblue;
+}
