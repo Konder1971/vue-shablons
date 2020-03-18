@@ -53,6 +53,11 @@
       <p>{{ inputValue }}</p>
     </div><hr>
 
+    <div class="block">
+      <h4 ref="heding">{{ titleHeder }}</h4>
+      <button class="btn btn-secondary" @click="updateTitle">Update title</button>
+    </div><hr ref="hrLine">
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
@@ -70,7 +75,8 @@
           title: 'Счетчик',
           x: 0,
           y: 0,
-          inputValue: ''
+          inputValue: '',
+          titleHeder: 'Доступ к DOM элементам'
         }
       },
       methods: {
@@ -106,6 +112,11 @@
         move: function (event) {
           this.x = event.clientX;
           this.y = event.clientY;
+        },
+        updateTitle: function () {
+          this.titleHeder = 'NEW TITLE FOR header'
+          this.$refs.heding.style.color = 'red'
+          this.$refs.hrLine.style. border = '1px solid green'
         }
       }
     })
