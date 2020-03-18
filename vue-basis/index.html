@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
   <div id="app" class="container">
     <h2>{{ appTitle }}</h2>
     <hr>
@@ -58,9 +59,22 @@
       <button class="btn btn-secondary" @click="updateTitle">Update title</button>
     </div><hr ref="hrLine">
 
+
+    <div class="block">
+      <h4>{{ title2 }}</h4>
+      <button class="btn btn-secondary" @click="title2 = 'Новый заголовок'">Update title2</button>
+      <button class="btn btn-dark" @click="doDestroy">Destroy</button>
+    </div><hr>
+
   </div>
+
+  <div id="app2" class="container"></div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
+    Vue.component('my-component', {
+
+    })
     new Vue ({
       el: '#app',
       data () {
@@ -76,7 +90,8 @@
           x: 0,
           y: 0,
           inputValue: '',
-          titleHeder: 'Доступ к DOM элементам'
+          titleHeder: 'Доступ к DOM элементам',
+          title2: 'Жизненный цикл'
         }
       },
       methods: {
@@ -118,8 +133,52 @@
           this.$refs.heding.style.color = 'red'
           this.$refs.hrLine.style. border = '1px solid green'
         }
+      },
+      doDestroy: function () {
+        this.$destroy()
+      },
+      beforeCreate: function () {
+
+      },
+      created: function () {
+
+      },
+      beforeMount: function () {
+        
+      },
+      mounted: function () {
+
+      },
+      beforeUpdate: function () {
+
+      },
+      updated: function () {
+
+      },
+      beforeDestroy: function () {
+
+      },
+      destroyed: function () {
+        
       }
     })
+
+    var app2 = new Vue ({
+      data () {
+        return {
+          title: 'Hello i am vue app2'
+        }
+      },
+      template: `
+        <div class="container">
+          <div class="block">
+            <h3>{{ title }}</h3>
+          </div>
+          <hr>
+        </div>`
+    })
+    app2.$mount('#app2')
+    
   </script>
 </body>
 </html>
