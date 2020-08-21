@@ -1,0 +1,11 @@
+node -v (версия node)
+
+vue --version  (проверка vue версии)
+npm uninstall vue-cli -g  (удаление vue-cli)
+npm install -g @vue/cli  (установка vue-cli)
+
+vue ui  (запускаем в терминале)
+Вы можете создавать и управлять проектами через графический интерфейс командой vue ui
+
+внутри проекта, запустите vue upgrade в каталоге проекта
+
