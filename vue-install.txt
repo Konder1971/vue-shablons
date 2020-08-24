@@ -58,3 +58,17 @@ n 0.8.14
 n rm 0.8.14
 Или:
 n - 0.8.14
+
+*********************************************
+
+Вы можете обновить до последней версии npm, используя:
+npm install -g npm@latest
+или npm install -g npm@next
+
+npx -v
+npm i npx
+
+npm install -g npx <project-name>
+
+npx create-nux-app <project-name>
+npm run dev
