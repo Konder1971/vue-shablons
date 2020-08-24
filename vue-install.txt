@@ -10,8 +10,10 @@ vue ui  (запускаем в терминале)
 внутри проекта, запустите vue upgrade в каталоге проекта
 
 ********************************************************
-npm -v
-npm i -g npm-upgrade 
+
+npm -v - версия npm
+npm install npm@latest -g  -обновление npm
+npm i -g npm-upgrade   -обновление npm
 
 установите последнюю версию Vue CLI:
 vue --version или vue -V
@@ -29,9 +31,11 @@ nuxt --version
 
 **********************************************************************
 
-Обновление njde.js
+Обновление nоde.js
 
 node -v
+
+npm uninstall npm -g
 
 Очистить кэш npm:
 npm cache clean -f
