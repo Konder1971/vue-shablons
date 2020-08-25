@@ -77,6 +77,21 @@ npm run dev
 ****************************************************
 
 
+sudo npm install -g nuxt 
+npm init nuxt-app name-project
+
+npm install -g create-nuxt-app
+npx -v
+npm install -g npx
+npx create-nuxt-app name-project
+npm run dev
+
+npm i bootstrap
+
+
+****************************************************
+
+
 Установка gulp
 https://webdesign-master.ru/blog/tools/gulp-4-lesson.html
 https://webdesign-master.ru/blog/tools/2016-03-09-gulp-beginners.html
