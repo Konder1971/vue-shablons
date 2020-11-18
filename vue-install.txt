@@ -92,7 +92,8 @@ npm i bootstrap
 
 ****************************************************
 
-$ ncu -u --packageFile package.json обновление для плагинов gulp
+npm up -D обновление для плагинов gulp 
+$ ncu -u --packageFile package.json обновление для плагинов gulp ???
 
 Установка gulp
 https://webdesign-master.ru/blog/tools/gulp-4-lesson.html
